@@ -1,0 +1,137 @@
+body{
+    margin: 0 auto;
+    background-color: #eeeeee;
+}
+
+*{
+    padding:0;
+    margin:0;
+}
+
+.titles{
+    width: 100%;
+    height: 50px;
+    background-color: #cf292e;
+}
+.titles .leftIcon{
+    width: 15px;
+    float: left;
+    position: absolute;
+    padding-top: 18px;
+    padding-left: 8px;
+}
+.titles .rightIcon{
+    width: 17px;
+    float: right;
+    padding-top: 15px;
+    padding-right: 8px;
+}
+.titles div{
+    text-align: center;
+}
+.titles p{
+    font-size: 16px;
+    color: white;
+    padding-top: 12px;
+}
+
+/* 详情 */
+.detailContentTop img{
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.detailContentPer{
+    /*width: 100%;*/
+    padding-top: 90px;
+    /*background-color: #1E9FFF;*/
+}
+.detailContentPer .detailHead{
+    width: 50px;
+    border-radius: 100%;
+    /*margin-top: 90px;*/
+    margin-left: 20px;
+    position: absolute;
+    /*border: 1px solid white;*/
+}
+.detailContentPer p{
+    font-size: 12px;
+    position: absolute;
+    margin-left: 75px;
+}
+.detailPer{
+    color: #676767;
+    margin-top: 18px;
+}
+.detailPerName{
+    margin-top: 35px;
+}
+.contentPerRight{
+    float: right;
+    margin-top: 32px;
+    /*width: 100px;*/
+}
+.perRightLeft{
+    position: absolute;
+}
+.contentPerRight img{
+    margin-top: -10px;
+    width: 15px;
+    position: absolute;
+    margin-left: 10px;
+}
+.contentPerRight span{
+    font-size: 12px;
+    color: #676767;
+    /*margin-top: 28px;*/
+    /*position: absolute;*/
+}
+.perRightRight{
+    margin-left: 45px;
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 聚会成员 */
+.partyMenContent{
+    padding: 0 10px 30px 10px;
+}
+.partyMenContent img{
+    width: 67px;
+    margin: 15px 2px;
+}
+.memContent span{
+    width: 67px;
+    position: absolute;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 85px;
+    /* 省略 */
+    text-overflow:ellipsis;
+    overflow:hidden;
+    white-space:nowrap;
+}
