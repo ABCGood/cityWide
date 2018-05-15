@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <title>名片详情</title>
+    <link href="css/citywide.css" rel="stylesheet">
+</head>
+<body>
+<div class="titles">
+    <img src="images/back.png" class="leftIcon" onclick="window.history.go(-1)">
+    <img src="images/4.png" class="rightIcon">
+    <div>
+        <p>名片详情</p>
+    </div>
+</div>
+
+<div class="cardContent">
+    <img src="images/14.png" class="right">
+    <div class="CardContentPer">
+        <img src="images/head_por.jpg" class="head_por">
+        <p>无敌路小葵哈哈哈</p>
+        <div class="perContent">
+            <p>90后美甲师，爱唱歌，爱交友...</p>
+            <p>20岁/大专/<img src="images/15.png" class="CardContentSex"></p>
+        </div>
+        <div class="cardContentBottom">
+            <span>微信号</span>
+            <img src="images/16.png">
+            <span style="margin-left: 8px">联系号码</span>
+            <img src="images/17.png">
+            <span style="margin-left: 19px">商铺</span>
+            <img src="images/18.png">
+            <span>聊一聊</span>
+            <img src="images/19.png" style="border-right:none">
+        </div>
+    </div>
+</div>
+<div class="cardContentCenter">
+    <img src="images/detail.png" class="detail">
+    <p class="cardContentCenterTitle">邀请你参加我们的聚会</p>
+    <hr>
+    <div class="cardContentCenterCon">
+        <div class="content" id="cardContentCenter">
+            <span>唱歌喝酒女神专场</span>
+            <p>地址：[揭阳市榕城区]新野KTV</p>
+            <p>2018.04.02 14:00-17:00</p>
+            <div class="cardCenterConBtn">
+                <span style="color: #f0b931">限女生</span>
+                <span>人数：30</span>
+                <span class="btn">立即报名</span>
+            </div>
+        </div>
+        <img src="images/head_por2.jpg" class="head_por2">
+    </div>
+</div>
+<div class="cardContentContentBottom">
+    <img src="images/detail.png" class="detail">
+    <p class="cardContentConBotTitle">我提供的服务</p>
+    <hr>
+    <script id="cardContent" type="text/html">
+        {{# for(var i = 0; i < d.user.length; i++){ }}
+        <div class="cardContentCenterCon">
+            <div class="content">
+                <span>{{d.user[i].title}}</span>
+                <!--<div class="lTitle" id="cardContBotBtn{{i}}">-->
+                <div class="lTitle">
+                    {{# if(d.user[i].method=="到店服务"){ }}
+                    <span style="color: white;background-color: #0a9eff;border-radius: 2px">{{d.user[i].method}}</span>
+                    {{# } else { }}
+                    <span style="color: white;background-color: #cdacfe;border-radius: 2px">{{d.user[i].method}}</span>
+                    {{# }}}
+                    <span>{{d.user[i].detail}}</span>
+                </div>
+                <div class="cardContentConBotBtn">
+                    <span style="color: #f0b931">定金￥{{d.user[i].cost}}</span>
+                    <span>全款￥{{d.user[i].allcost}}</span>
+                    <span class="btn">立即预约</span>
+                </div>
+            </div>
+            <img src="images/head_por2.jpg" class="head_por2">
+        </div>
+        <hr style="margin-top: 15px">
+        {{# } }}
+    </script>
+    <div id="textCardContent"></div>
+</div>
+<script src="js/jquery.min.js"></script>
+<script src="js/laytpl.js"></script>
+<script src="js/visiting_card.js"></script>
+</body>
+</html>

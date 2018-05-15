@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <title>报名成功</title>
+    <link href="css/citywide.css" rel="stylesheet">
+</head>
+<body>
+    <div class="signUpSuccess" id="signUpSuccess">
+        <div class="closeIcon">
+            <img src="images/close.png" onclick="window.history.go(-1)">
+        </div>
+        <img src="images/10.png" class="successLogo">
+        <p>报名成功</p>
+        <button onclick="theCode()">查看签到码</button>
+    </div>
+    <div id="signUpCode" class="signUpCode" style="display: none">
+        <div class="signUpCodeTop">
+            <img src="images/head_por.jpg">
+            <p>海豚湾志愿者协会</p>
+            <p class="code">签到口令： 0755 5366 1250</p>
+        </div>
+        <div class="signUpCodeTopC">
+            <img src="images/code.jpg">
+        </div>
+        <div class="signUpCodeTopBottom">
+            <span>签到的时候请将此二维码给工作人员登记</span>
+        </div>
+    </div>
+    <div style="background-color: #7f7f7f;position: fixed;top: 0;right: 0;bottom: 0;left: 0;z-index: -1" onclick="window.history.go(-1)"></div>
+</body>
+<script>
+    function theCode() {
+        document.getElementById('signUpSuccess').style.display = 'none';
+        document.getElementById('signUpCode').style.display = 'block';
+    }
+</script>
+</html>

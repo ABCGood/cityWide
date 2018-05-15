@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="titles">
-    <img src="images/back.png" class="leftIcon">
+    <img src="images/back.png" class="leftIcon" onclick="window.history.go(-1)">
     <div>
         <p>聚会成员</p>
     </div>
@@ -20,8 +20,10 @@
     <div class="memContent">
         <script id="memContent" type="text/html">
             {{# for(var i = 0; i < d.content.length; i++){ }}
-                <span>{{d.content[i].name}}</span>
-                <img src="images/head_por.jpg">
+            <a href="visiting_card.html">
+                <span id="memName{{i}}">{{d.content[i].name}}</span>
+                <img src="images/head_por.jpg" id="memImg{{i}}">
+            </a>
             {{# } }}
         </script>
         <div id="textMemContent"></div>

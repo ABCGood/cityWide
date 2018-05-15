@@ -2,9 +2,122 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
     <title>主页</title>
+    <link href="css/citywide.css" rel="stylesheet">
+    <link href="layui/css/layui.css" rel="stylesheet">
+    <link rel="stylesheet" href="eleme-ui/index.css" />
 </head>
+<style>
+    input{
+        border: none;
+    }
+    .el-cascader-menu{
+        width: 313px;
+        left: 3px;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color: #cf292e;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color: #cf292e;
+    }
+    .is-opened input:-ms-input-placeholder{
+        color: #cf292e;
+    }
+    .is-opened input::-webkit-input-placeholder{
+        color: #cf292e;
+    }
+</style>
+<script>
+</script>
 <body>
+<div class="titles">
+    <img src="images/back.png" class="leftIcon">
+    <img src="images/1.png" class="rightIcon">
+    <div class="titleTop">
+        <span class="titleTopLeft" id="wholeCountry">全国性</span>
+        <span class="titleTopRight" id="local">本地区</span>
+    </div>
+</div>
+<div class="layui-tab">
+    <img src="images/indexIcon.png" class="indexIcon">
+    <ul class="layui-tab-title">
+        <li class="layui-this" id="tabTop1">正在报名中</li>
+        <li id="tabTop2">往期精彩活动</li>
+    </ul>
+    <div class="layui-tab-content">
+        <div class="layui-tab-item layui-show">
+            <div class="top">
 
+                <div id="app" style="position: absolute;margin-left: 5%">
+                    <div>
+                        <el-cascader :options="options" :show-all-levels="false" :clearable = "true" v-model="selectedOptions" @change="handleChange"  style="width: 47%" placeholder="聚会地点">
+                        </el-cascader>
+                    </div>
+                </div>
+
+                <div id="myVue1" style="margin-left: 37%;position: absolute">
+                    <div>
+                        <el-cascader placeholder="聚会时间" :clearable="true" :options="TimeInfo" v-model="selectedOptions2" @change="handleChange" style="width: 50%">
+                        </el-cascader>
+                    </div>
+                </div>
+
+                <div id="myVue2" style="margin-left: 70%;">
+                    <div style="margin-bottom: -10px">
+                        <el-cascader placeholder="费用" :clearable="true" :options="CostInfo" v-model="selectedOptions2" @change="handleChange"  style="width: 85%">
+                        </el-cascader>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="indexContent" id="indexContent">
+                <script id="indexSignUpContent" type="text/html">
+                    {{# for(var i = 0; i < d.length; i++){ }}
+                        <div class="content">
+                            <img src="images/indexTop.jpg">
+                            <p>{{d[i].title}}</p>
+                            <span>聚会时间：{{d[i].time}}</span>
+                            <span class="indexContentMon" style="color: #f08519;">报名费{{d[i].cost}}元/人</span><br>
+                            <span>人数：仅限{{d[i].num}}人</span>
+                            <a href="details_page.html">
+                                <span class="indexContentBtn" style="color: #cf292e;">立即报名</span>
+                            </a>
+                        </div>
+                    {{# } }}
+                </script>
+                <div id="textSignUpContent"></div>
+                <div id="textIndexSignUpContent"></div>
+            </div>
+        </div>
+        <div class="layui-tab-item laterActivity">
+            <script id="indexPastContent" type="text/html">
+                <div>
+                    <h3><strong>{{d.time}}</strong></h3>
+                    {{# for(var i = 0; i < d.content.length; i++){ }}
+                        <div class="laterActivityContent">
+                            <div class="laterActivityBG">
+                                <span>{{d.content[i].title}}</span>
+                            </div>
+                        </div>
+                    {{# } }}
+                </div>
+            </script>
+            <div id="textPastContent"></div>
+            <div id="textIndexPastContent"></div>
+        </div>
+    </div>
+</div>
+
+<script src="js/vue.js"></script>
+<script type="text/javascript" src="vue/vue.min.js" ></script>
+<script type="text/javascript" src="eleme-ui/index.js" ></script>
+<script type="text/javascript" src="city-picker/city-data.js" ></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/laytpl.js"></script>
+<script src="layui/layui.js"></script>
+<script src="js/index.js"></script>
 </body>
 </html>

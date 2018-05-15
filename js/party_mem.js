@@ -13,7 +13,15 @@ $(document).ready(function () {
     laytpl($('#memContent').html()).render(result.data, function (html) {
         // console.log(html)
         if (result.data){
-            $('#textMemContent').append(html)
+            console.log(result.data.content.length)
+            $('#textMemContent').append(html);
+            var windowWidth = screen.availWidth;
+            var widths = (windowWidth-20)/4-8;
+            console.log(widths);
+            for (var i = 0; i < result.data.content.length; i++){
+                document.getElementById("memName"+i).style.width = widths+"px";
+                document.getElementById("memImg"+i).style.width = widths+"px";
+            }
         } else {
             $('#textMemContent').html(html)
         }

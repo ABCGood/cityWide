@@ -8,6 +8,16 @@ body{
     margin:0;
 }
 
+a{
+    text-decoration: none;
+    color: black;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-user-select: none;
+    /*-moz-user-focus: none;*/
+    -moz-user-select: none;
+}
+
+
 .titles{
     width: 100%;
     height: 50px;
@@ -24,7 +34,7 @@ body{
     width: 17px;
     float: right;
     padding-top: 15px;
-    padding-right: 8px;
+    padding-right: 10px;
 }
 .titles div{
     text-align: center;
@@ -34,8 +44,205 @@ body{
     color: white;
     padding-top: 12px;
 }
+.titleTop{
+    padding-top: 15px;
+    margin-left: 20px;
+}
+.titleTop span{
+    font-size: 16px;
+    border: 1px solid white;
+    padding: 2px 20px;
+    margin-left: -6px;
+}
+.titleTopLeft{
+    border-radius: 5px 0 0 5px;
+    background-color: white;
+    color: #cf292e;
+}
+.titleTopRight{
+    border-radius: 0 5px 5px 0;
+    color: white;
+}
 
-/* 详情 */
+
+
+/**
+    主页
+ */
+.layui-tab-title li{
+    /*width: 40.5%;*/
+    /*width: 130px;*/
+    background-color: white;
+}
+.layui-show .top{
+    background-color: white;
+    padding-bottom: 10px;
+}
+.layui-show select{
+    margin-top: 10px;
+    /*width: 104px;*/
+    border: none;
+    /*background-color: #eeeeee;*/
+    margin-left: 25px;
+}
+.indexContent{
+    margin-top: 8px;
+    background-color: white;
+    /*height: 600px;*/
+    padding: 8px;
+}
+.indexContent .content{
+    border: 1px solid #aaaaaa;
+    padding: 5px 8px 10px 8px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.indexContent img{
+    width: 100%;
+}
+.indexContent p{
+    font-size: 14px;
+    line-height: 20px;
+}
+.indexContent span{
+    font-size: 12px;
+    color: #aaaaaa;
+}
+.indexContentMon{
+    float: right;
+}
+.indexContentBtn{
+    border: 1px solid #cf292e;
+    float: right;
+    padding: 1px 3px;
+    border-radius: 3px;
+}
+.indexIcon{
+    width: 40px;
+    position: fixed;
+    right: 9px;
+    top: 340px;
+}
+/* 往期精彩活动 */
+.laterActivity{
+    padding: 0 10px;
+}
+.laterActivity h3{
+    margin-top: 10px;
+}
+.laterActivityContent{
+    /*height: 120px;*/
+    width: 100%;
+    margin-top: 10px;
+    background-image: url("../images/indexTop.jpg");
+    padding-top: 80px;
+}
+.laterActivityContent span{
+    position: absolute;
+    color: white;
+}
+.laterActivityBG{
+    /*width: 100%;*/
+    height: 25px;
+    /*background-color: black;*/
+    /*opacity: .4;*/
+    padding: 5px 5px 0 10px;
+    background-color:#000000;/* IE6和部分IE7内核的浏览器(如QQ浏览器)下颜色被覆盖 */
+    background-color:rgba(0,0,0,0.5); /* IE6和部分IE7内核的浏览器(如QQ浏览器)会读懂，但解析为透明 */
+}
+.laterActivityBG span{
+    color: #FFFFFF;
+}
+
+/**
+    相册
+ */
+.photoPageTop{
+    background-color:#000000;
+    background-color:rgba(0,0,0,0.5);
+    height: 120px;
+    /*background-image: url("../images/indexTop.jpg");*/
+    /*height: 100px;*/
+}
+.photoPageTop .indexTop{
+    width: 100%;
+    height: 120px;
+    position: absolute;
+    z-index: -1;
+    filter: alpha(opacity=70);
+    /*opacity: .4;*/
+    /*background-color:#000000;*/
+    /*background-color:rgba(0,0,0,0.5);*/
+}
+.photoPageTopPic p{
+    padding: 65px 15px 5px 15px;
+
+}
+.photoPageTopPic p,.photoPageTopPic span{
+    color: white;
+    font-size: 14px;
+}
+.photoPageTopPic .num{
+    /*padding: 65px 15px 10px 0;*/
+    padding-left: 15px;
+}
+.photoPageTopPic img{
+    width: 15px;
+}
+.photoPageTopPic .right{
+    float: right;
+    padding-right: 15px;
+}
+.photoBottom{
+    padding: 5px 15px;
+}
+.photoBottomCon{
+    /*position: absolute;*/
+    /*display: inline;*/
+    background-color: white;
+    width: 90px;
+    height: 95px;
+    border-radius: 3px;
+}
+.photoBottomCon .head_por2{
+    width: 90px;
+    /*z-index: -1;*/
+}
+.photoBottomCon .head_por{
+    width: 30px;
+    border-radius: 50%;
+    margin-top: 60px;
+    margin-left: 5px;
+    position: absolute;
+}
+.photoBottomConImg img{
+    width: 15px;
+    position: absolute;
+}
+.photoBottomConImg{
+    /*padding-right: -10px;*/
+    float: right;
+    font-size: 12px;
+    color: #666666;
+    padding-right: 2px;
+
+}
+.photoBottomConImg span{
+    padding-left: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+/**
+    详情
+ */
 .detailContentTop img{
     width: 100%;
     position: absolute;
@@ -43,7 +250,7 @@ body{
 }
 .detailContentPer{
     /*width: 100%;*/
-    padding-top: 90px;
+    padding-top: 29%;
     /*background-color: #1E9FFF;*/
 }
 .detailContentPer .detailHead{
@@ -75,7 +282,7 @@ body{
     position: absolute;
 }
 .contentPerRight img{
-    margin-top: -10px;
+    margin-top: -14px;
     width: 15px;
     position: absolute;
     margin-left: 10px;
@@ -90,6 +297,224 @@ body{
     margin-left: 45px;
     margin-right: 5px;
 }
+/* 选项卡切换 */
+.detailActivity{
+    margin-top: 60px;
+    margin-left: 10px;
+}
+.detailActTitle{
+    font-size: 12px;
+    border: 1px solid #cf292e;
+    padding: 3px 5px;
+    color: #cf292e;
+    margin-left: 10px;
+
+}
+#tab1{
+    background-color: #cf292e;
+    color: white;
+}
+#tab2{
+    margin-left: -4px;
+}
+.triangle{
+    margin-left: 30px;
+    width: 0;
+    height: 0;
+    border-top:8px solid #cf292e;
+    border-right :10px solid #eeeeee;
+    border-bottom :10px solid #eeeeee;
+    border-left:10px solid #eeeeee;
+}
+#triangle2{
+    margin-left: 90px;
+}
+.detailActivity .tab-content{
+    background-color: white;
+    width: 90%;
+    font-size: 14px;
+    padding: 10px;
+    top: 40px;
+    border-radius: 5px;
+}
+.tab-content p{
+    position: absolute;
+}
+.tab-content span{
+    margin-left: 72px;
+    color: #aaaaaa;
+}
+.tab-content hr{
+    border-color: #f7f7f7;
+    margin: 13px 0;
+}
+.tab-content img{
+    width: 18px;
+    float: right;
+    margin-right: 3px;
+}
+/* 活动流程 */
+.tab-content2{
+    background-color: white;
+    font-size: 12px;
+    width: 95%;
+    border-radius: 5px;
+    padding-top: 10px;
+}
+.tabCon2Time{
+    margin-top: 2px;
+    margin-left: 10px;
+    position: absolute;
+    color: #aaaaaa;
+}
+.layui-text p{
+    font-size: 12px;
+}
+.tab-content2 li{
+    margin-left: 95px;
+}
+
+/* 赞助商 */
+.detailSponsor{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.detailSponsor .detailSponsorTitle{
+    width: 5px;
+    margin-top: 4px;
+    position: absolute;
+}
+.detailSponsor span{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.detailSponsorContent{
+    margin-top: 10px;
+    background-color: white;
+    margin-right: 10px;
+    padding: 8px 5px;
+}
+.detailSponsorContent img{
+    width: 30%;
+    position: absolute;
+}
+.detailSponsorContent p{
+    margin-left: 35%;
+}
+.detailSponsorContentTitle{
+    font-size: 14px;
+}
+.detailSponsorContentCon{
+    color: #676767;
+    font-size: 12px;
+    /*margin-top: 5px;*/
+    /*width: 175px;*/
+    line-height: 20px;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+.detailBtn{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    padding-top: 15px;
+    background-color: #eeeeee;
+    position: fixed;
+    z-index: 100;
+    bottom: 0;
+    left: 0;
+}
+.detailBtn button{
+    width: 150px;
+    border-radius: 20px;
+    color: white;
+    background-color: #cf292e;
+    padding: 4px 0;
+    border: none;
+}
+.detailBottom{
+    height: 60px;
+}
+
+/**
+    报名成功
+ */
+.signUpSuccess{
+    margin:45% 30px 100px 30px;
+    background-color: white;
+    /*width: 250px;*/
+    text-align: center;
+    font-size: 14px;
+    color: #cf292e;
+    border-radius: 5px;
+}
+.closeIcon{
+    position: absolute;
+    background-color: #aaaaaa;
+    margin-left: 70%;
+    padding: 10px 5px 10px 5px;
+    border-radius: 0 0 50px 50px;
+}
+.closeIcon img{
+    width: 18px;
+}
+.signUpSuccess .successLogo{
+    margin: 20px 0 10px 0;
+    width: 200px;
+}
+.signUpSuccess button{
+    margin-top: 10px;
+    background-color: white;
+    color: #cf292e;
+    border: 1px solid #cf292e;
+    padding: 5px 40px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+}
+.signUpCode{
+    margin:100px 30px;
+    background-color: white;
+    font-size: 14px;
+}
+.signUpCodeTop{
+    padding: 15px;
+}
+.signUpCodeTop img{
+    width: 55px;
+    position: absolute;
+}
+.signUpCodeTop p{
+    font-size: 14px;
+    margin-left: 70px;
+}
+.signUpCodeTop .code{
+    margin-top: 10px;
+    color: #aaaaaa;
+    font-size: 12px;
+}
+.signUpCodeTopC{
+    /*background-color: #2E2D3C;*/
+    text-align: center;
+    margin-top: 20px;
+}
+.signUpCodeTopC img{
+    width: 180px;
+    border: 1px solid black;
+    padding: 15px;
+}
+.signUpCodeTopBottom{
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+.signUpCodeTopBottom span{
+    font-size: 12px;
+    color: #aaaaaa;
+}
 
 
 
@@ -109,29 +534,146 @@ body{
 
 
 
-
-
-
-
-
-
-
-/* 聚会成员 */
+/**
+    聚会成员
+ */
 .partyMenContent{
     padding: 0 10px 30px 10px;
 }
 .partyMenContent img{
-    width: 67px;
+    /*width: 67px;*/
     margin: 15px 2px;
 }
 .memContent span{
-    width: 67px;
+    /*width: 67px;*/
     position: absolute;
     font-size: 12px;
     text-align: center;
-    margin-top: 85px;
+    /*margin-top: 85px;*/
+    margin-top: 26%;
     /* 省略 */
     text-overflow:ellipsis;
     overflow:hidden;
     white-space:nowrap;
+}
+
+
+/**
+    名片详情
+ */
+.cardContent .right{
+    width: 35px;
+    /*position: absolute;*/
+    float: right;
+    margin-top: 10px;
+}
+.CardContentPer{
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+}
+.CardContentPer .head_por{
+    margin-left: 35px;
+    border-radius: 50%;
+    width: 65px;
+}
+.CardContentPer .perContent{
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+}
+.CardContentPer .CardContentSex{
+    width: 13px;
+    position: absolute;
+    padding-top: 3px;
+}
+.cardContentBottom{
+    height: 60px;
+    font-size: 12px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ffc3c5;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 #ffc3c5;
+}
+.cardContentBottom span{
+    position: absolute;
+    margin-left: 13px;
+    margin-top: 40px;
+    color: #666666;
+}
+.cardContentBottom img{
+    width: 30px;
+    padding: 5px 17px;
+    border-right: 1px solid #eeeeee;
+    /*border: 1px solid black;*/
+}
+.cardContentCenter, .cardContentContentBottom{
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px;
+}
+.cardContentCenter .detail, .cardContentContentBottom .detail{
+    width: 5px;
+    position: absolute;
+    margin-top: 3px;
+}
+.cardContentCenter .cardContentCenterTitle, .cardContentContentBottom .cardContentConBotTitle{
+    font-size: 14px;
+    padding-left: 10px;
+}
+.cardContentCenterCon{
+    /*margin-top: 15px;*/
+}
+.cardContentCenterCon .content{
+    position: absolute;
+    margin-left: 115px;
+    font-size: 14px;
+}
+.cardContentCenterCon .head_por2{
+    height: 70px;
+    width: 110px;
+}
+.cardContentCenterCon p{
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+}
+.cardCenterConBtn{
+    /*margin-top: 4px;*/
+    font-size: 12px;
+    color: #666666;
+}
+.cardCenterConBtn .btn{
+    border: 1px solid #cf292e;
+    color: #cf292e;
+    float: right;
+    padding: 0 2px;
+    border-radius: 3px;
+    margin-right: -10px;
+}
+.cardContentConBotBtn{
+    font-size: 12px;
+}
+.cardContentConBotBtn span{
+    margin-right: 5px;
+}
+.cardContentConBotBtn .btn{
+    border: 1px solid #cf292e;
+    color: #cf292e;
+    float: right;
+    padding: 0 2px;
+    border-radius: 3px;
+    /*margin-left: 8px;*/
+}
+.cardContentCenter hr,.cardContentContentBottom hr{
+    border-color: #f7f7f7;
+    margin: 10px 0;
+}
+.cardContentCenterCon .lTitle{
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+
 }
