@@ -2,13 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <title>相册</title>
     <link href="css/citywide.css" rel="stylesheet">
+    <script src="js/jquery.min.js"></script>
 </head>
-<body>
+<body style="background-color: white">
 <div class="titles">
-    <img src="images/back.png" class="leftIcon">
+    <img src="images/back.png" class="leftIcon" onclick="window.history.go(-1)">
     <div>
         <p>相册</p>
     </div>
@@ -29,30 +30,21 @@
 </div>
 
 <div class="photoBottom">
-    <div class="photoBottomCon" style="position: absolute">
-        <img class="head_por" src="images/head_por.jpg">
-        <img class="head_por2" src="images/head_por2.jpg">
-        <div class="photoBottomConImg">
-            <img src="images/20.png">
-            <span class="small-font smallsize-font">220</span>
+    <script id="photoBottomContent" type="text/html">
+    {{# for(var i = 0; i < d.photo.length; i++){ }}
+        <div class="photoBottomCon">
+            <div class="photoBottomConImg">
+                <img src="images/20.png">
+                <span class="small-font smallsize-font">{{d.photo[i].num}}</span>
+            </div>
+            <img class="head_por" src="images/head_por.jpg">
+            <img class="head_por2" src="images/head_por2.jpg">
         </div>
-    </div>
-    <div class="photoBottomCon" style="margin-left: 100px;position: absolute">
-        <img class="head_por" src="images/head_por.jpg">
-        <img class="head_por2" src="images/head_por2.jpg">
-        <div class="photoBottomConImg">
-            <img src="images/20.png">
-            <span class="small-font smallsize-font">220</span>
-        </div>
-    </div>
-    <div class="photoBottomCon" style="margin-left: 200px">
-        <img class="head_por" src="images/head_por.jpg">
-        <img class="head_por2" src="images/head_por2.jpg">
-        <div class="photoBottomConImg">
-            <img src="images/20.png">
-            <span class="small-font smallsize-font">220</span>
-        </div>
-    </div>
+    {{# } }}
+    </script>
+    <div id="textPhotoBottomContent"></div>
 </div>
+<script src="js/photo_page.js"></script>
+<script src="js/laytpl.js"></script>
 </body>
 </html>

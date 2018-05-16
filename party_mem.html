@@ -8,7 +8,7 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/laytpl.js"></script>
 </head>
-<body>
+<body style="background-color: white">
 <div class="titles">
     <img src="images/back.png" class="leftIcon" onclick="window.history.go(-1)">
     <div>
@@ -17,17 +17,23 @@
 </div>
 
 <div class="partyMenContent">
-    <div class="memContent">
-        <script id="memContent" type="text/html">
-            {{# for(var i = 0; i < d.content.length; i++){ }}
-            <a href="visiting_card.html">
-                <span id="memName{{i}}">{{d.content[i].name}}</span>
-                <img src="images/head_por.jpg" id="memImg{{i}}">
-            </a>
-            {{# } }}
-        </script>
-        <div id="textMemContent"></div>
-    </div>
+    <!--<div class="memContent">-->
+        <!--<a href="visiting_card.html">-->
+            <!--<span>xiaoh</span>-->
+            <!--<img src="images/head_por.jpg">-->
+        <!--</a>-->
+    <!--</div>-->
+    <script id="memContent" type="text/html">
+        {{# for(var i = 0; i < d.content.length; i++){ }}
+            <div class="memContent">
+                <a href="visiting_card.html">
+                    <span>{{d.content[i].name}}</span>
+                    <img src="images/head_por.jpg">
+                </a>
+            </div>
+        {{# } }}
+    </script>
+    <div id="textMemContent"></div>
 </div>
 <script src="js/party_mem.js"></script>
 </body>

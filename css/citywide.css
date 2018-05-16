@@ -2,12 +2,10 @@ body{
     margin: 0 auto;
     background-color: #eeeeee;
 }
-
 *{
     padding:0;
     margin:0;
 }
-
 a{
     text-decoration: none;
     color: black;
@@ -17,7 +15,7 @@ a{
     -moz-user-select: none;
 }
 
-
+/* 头部标签 */
 .titles{
     width: 100%;
     height: 50px;
@@ -65,7 +63,6 @@ a{
 }
 
 
-
 /**
     主页
  */
@@ -76,7 +73,7 @@ a{
 }
 .layui-show .top{
     background-color: white;
-    padding-bottom: 10px;
+    /*padding-bottom: 10px;*/
 }
 .layui-show select{
     margin-top: 10px;
@@ -107,6 +104,7 @@ a{
 .indexContent span{
     font-size: 12px;
     color: #aaaaaa;
+    line-height: 14px;
 }
 .indexContentMon{
     float: right;
@@ -114,8 +112,9 @@ a{
 .indexContentBtn{
     border: 1px solid #cf292e;
     float: right;
-    padding: 1px 3px;
+    padding: 0 3px;
     border-radius: 3px;
+    margin-top: 1%;
 }
 .indexIcon{
     width: 40px;
@@ -123,12 +122,13 @@ a{
     right: 9px;
     top: 340px;
 }
-/* 往期精彩活动 */
+/* 主页中的往期精彩活动 */
 .laterActivity{
     padding: 0 10px;
 }
 .laterActivity h3{
-    margin-top: 10px;
+    padding-top: 10px;
+    /*margin-top: 10px;*/
 }
 .laterActivityContent{
     /*height: 120px;*/
@@ -154,6 +154,7 @@ a{
     color: #FFFFFF;
 }
 
+
 /**
     相册
  */
@@ -175,12 +176,14 @@ a{
     /*background-color:rgba(0,0,0,0.5);*/
 }
 .photoPageTopPic p{
-    padding: 65px 15px 5px 15px;
-
+    padding: 75px 15px 0 15px;
 }
 .photoPageTopPic p,.photoPageTopPic span{
     color: white;
     font-size: 14px;
+}
+.photoPageTopPic span{
+    font-size: 12px;
 }
 .photoPageTopPic .num{
     /*padding: 65px 15px 10px 0;*/
@@ -188,32 +191,47 @@ a{
 }
 .photoPageTopPic img{
     width: 15px;
+    /*display: -webkit-inline-flex;*/
 }
 .photoPageTopPic .right{
     float: right;
     padding-right: 15px;
 }
 .photoBottom{
-    padding: 5px 15px;
+    margin: 0 1%;
+    padding: 5px 1% 0 2%;
+    /*background-color: white;*/
+    /*height: 100px;*/
+    /*width: 98%;*/
+    /*border: 1px solid #eeeeee;*/
 }
 .photoBottomCon{
     /*position: absolute;*/
     /*display: inline;*/
     background-color: white;
-    width: 90px;
-    height: 95px;
+    margin: 1%;
+    width: 29%;
+    height: 90px;
     border-radius: 3px;
+    border: 1px solid #eeeeee;
+    display: -webkit-inline-flex
 }
 .photoBottomCon .head_por2{
-    width: 90px;
+    width: 100%;
+    height: 80%;
     /*z-index: -1;*/
 }
 .photoBottomCon .head_por{
     width: 30px;
     border-radius: 50%;
-    margin-top: 60px;
+    margin-top: 57px;
     margin-left: 5px;
     position: absolute;
+}
+.photoBottomConImg{
+    position: absolute;
+    margin-top: 72px;
+    margin-left: 50px;
 }
 .photoBottomConImg img{
     width: 15px;
@@ -230,14 +248,6 @@ a{
 .photoBottomConImg span{
     padding-left: 15px;
 }
-
-
-
-
-
-
-
-
 
 
 /**
@@ -308,7 +318,6 @@ a{
     padding: 3px 5px;
     color: #cf292e;
     margin-left: 10px;
-
 }
 #tab1{
     background-color: #cf292e;
@@ -373,7 +382,6 @@ a{
 .tab-content2 li{
     margin-left: 95px;
 }
-
 /* 赞助商 */
 .detailSponsor{
     margin-top: 10px;
@@ -439,6 +447,7 @@ a{
 .detailBottom{
     height: 60px;
 }
+
 
 /**
     报名成功
@@ -517,40 +526,38 @@ a{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /**
     聚会成员
  */
 .partyMenContent{
-    padding: 0 10px 30px 10px;
+    margin: 0 1% 0 1.5%;
+    /*border: 1px solid black;*/
+    /*width: 98%;*/
+    padding: 3% 1%;
+}
+.memContent{
+    /*border: 1px solid red;*/
+    width: 21.5%;
+    /*height: 80px;*/
+    display: -webkit-inline-flex;
+    text-align: center;
+    margin: 2% 1%;
+    padding: 0.5% 0;
 }
 .partyMenContent img{
     /*width: 67px;*/
-    margin: 15px 2px;
+    width: 100%;
+    /*margin: 15px 2px;*/
 }
 .memContent span{
-    /*width: 67px;*/
+    /*background-color: #cf292e;*/
+    width: 21.5%;
     position: absolute;
     font-size: 12px;
-    text-align: center;
+    line-height: 20px;
+    /*text-align: center;*/
     /*margin-top: 85px;*/
-    margin-top: 26%;
+    margin-top: 20%;
     /* 省略 */
     text-overflow:ellipsis;
     overflow:hidden;
@@ -675,5 +682,4 @@ a{
     font-size: 12px;
     line-height: 20px;
     color: #666666;
-
 }

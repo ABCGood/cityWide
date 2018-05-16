@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <title>主页</title>
     <link href="css/citywide.css" rel="stylesheet">
     <link href="layui/css/layui.css" rel="stylesheet">
     <link rel="stylesheet" href="eleme-ui/index.css" />
+    <script src="js/jquery.min.js"></script>
 </head>
 <style>
     input{
         border: none;
-    }
-    .el-cascader-menu{
-        width: 313px;
-        left: 3px;
     }
     :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
         color: #cf292e;
@@ -26,6 +23,31 @@
         color: #cf292e;
     }
     .is-opened input::-webkit-input-placeholder{
+        color: #cf292e;
+    }
+    .is-reverse input:-ms-input-placeholder{
+        color: #cf292e;
+    }
+    .is-reverse input::-webkit-input-placeholder{
+        color: #cf292e;
+    }
+    .el-cascader span{
+        padding-left: 30%;
+    }
+    .layui-flow-more{
+        margin: 10px 0 0 0;
+        padding-bottom: 10px;
+    }
+    .el-select-dropdown{
+        width: 315px;
+    }
+    .el-cascader-menu{
+        width: 105px;
+    }
+    .el-select .el-input__inner:focus:-ms-input-placeholder,.el-select .el-input .el-input__icon.is-reverse{
+        color: #cf292e;
+    }
+    .el-select .el-input__inner:focus::-webkit-input-placeholder, .el-select .el-input .el-input__icon.is-reverse{
         color: #cf292e;
     }
 </style>
@@ -50,25 +72,27 @@
         <div class="layui-tab-item layui-show">
             <div class="top">
 
-                <div id="app" style="position: absolute;margin-left: 5%">
+                <div id="app" style="position: absolute;">
                     <div>
-                        <el-cascader :options="options" :show-all-levels="false" :clearable = "true" v-model="selectedOptions" @change="handleChange"  style="width: 47%" placeholder="聚会地点">
+                        <el-cascader :options="options" :show-all-levels="false" :clearable = "true" v-model="selectedOptions" @change="handleChange"  style="width: 47%;padding-left: 5%" placeholder="聚会地点">
                         </el-cascader>
                     </div>
                 </div>
-
-                <div id="myVue1" style="margin-left: 37%;position: absolute">
-                    <div>
-                        <el-cascader placeholder="聚会时间" :clearable="true" :options="TimeInfo" v-model="selectedOptions2" @change="handleChange" style="width: 50%">
-                        </el-cascader>
-                    </div>
+                <div id="myVue1" style="margin-left: 37%;position: absolute" class="myVue1">
+                    <template>
+                        <el-select v-model="value" clearable placeholder="聚会时间" style="width: 50%">
+                            <el-option v-for="item in TimeInfo" :key="item.value" :label="item.label" :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </template>
                 </div>
-
                 <div id="myVue2" style="margin-left: 70%;">
-                    <div style="margin-bottom: -10px">
-                        <el-cascader placeholder="费用" :clearable="true" :options="CostInfo" v-model="selectedOptions2" @change="handleChange"  style="width: 85%">
-                        </el-cascader>
-                    </div>
+                    <template>
+                        <el-select v-model="value"clearable placeholder="费用" style="width: 85%">
+                            <el-option v-for="item in CostInfo" :key="item.value" :label="item.label" :value="item.value">
+                            </el-option>
+                        </el-select>
+                    </template>
                 </div>
             </div>
 
@@ -92,16 +116,18 @@
                 <div id="textIndexSignUpContent"></div>
             </div>
         </div>
-        <div class="layui-tab-item laterActivity">
+        <div class="layui-tab-item laterActivity" style="background-color: white">
             <script id="indexPastContent" type="text/html">
                 <div>
                     <h3><strong>{{d.time}}</strong></h3>
                     {{# for(var i = 0; i < d.content.length; i++){ }}
-                        <div class="laterActivityContent">
-                            <div class="laterActivityBG">
-                                <span>{{d.content[i].title}}</span>
+                        <a href="photo_page.html">
+                            <div class="laterActivityContent">
+                                <div class="laterActivityBG">
+                                    <span>{{d.content[i].title}}</span>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     {{# } }}
                 </div>
             </script>
@@ -112,10 +138,8 @@
 </div>
 
 <script src="js/vue.js"></script>
-<script type="text/javascript" src="vue/vue.min.js" ></script>
 <script type="text/javascript" src="eleme-ui/index.js" ></script>
 <script type="text/javascript" src="city-picker/city-data.js" ></script>
-<script src="js/jquery.min.js"></script>
 <script src="js/laytpl.js"></script>
 <script src="layui/layui.js"></script>
 <script src="js/index.js"></script>
