@@ -25,13 +25,13 @@ layui.use('element', function(){
     var element = layui.element;
 });
 // 读取屏幕宽度来设置选项卡的宽度
-$(document).ready(function () {
-    console.log(window.innerWidth);
-    var windowWidth = screen.availWidth;
-    var widths = windowWidth/2-30;
-    document.getElementById("tabTop1").style.width = widths+"px";
-    document.getElementById("tabTop2").style.width = widths+"px";
-});
+// $(document).ready(function () {
+//     console.log(window.innerWidth);
+//     var windowWidth = screen.availWidth;
+//     var widths = windowWidth/2-30;
+//     document.getElementById("tabTop1").style.width = widths+"px";
+//     document.getElementById("tabTop2").style.width = widths+"px";
+// });
 
 // 读取数据，遍历
 window.onload = function () {
