@@ -1,4 +1,6 @@
-var result = "";
+var options = "";
+var  TimeInfo = "";
+var  CostInfo = "";
 $(document).ready(function() {
     $.ajax({
         url : "https://www.easy-mock.com/mock/5af24ab48b04ba36ed89b4cf/city-data",//请求地址
@@ -6,17 +8,23 @@ $(document).ready(function() {
         type : "get",//请求方式
         async : true,//是否异步请求
         success : function(data) {   //如何发送成功
-            result = data.data.options;
+            options = data.data.options;
+            TimeInfo = data.data.TimeInfo;
+            CostInfo = data.data.CostInfo;
+            console.log(data.data);
+
+            // 城市信息
             var Main = {
                 data() {
-                    console.log(result[0]);
+                    // console.log(result[0]);
                     return {
+                        options,
                         // result,
-                        options : [
-                            result[0],result[1],result[2],result[3],result[4],result[5],result[6],result[7],result[8],result[9],result[10],result[11],result[12],result[13],result[14],
-                            result[15], result[16],result[17],result[18],result[19],result[20],result[21],result[22],result[23],result[24],result[25],result[26],result[27],result[28],
-                            result[29], result[30], result[31],result[32],result[33],result[34]
-                        ],
+                        // options : [
+                        //     result[0],result[1],result[2],result[3],result[4],result[5],result[6],result[7],result[8],result[9],result[10],result[11],result[12],result[13],result[14],
+                        //     result[15], result[16],result[17],result[18],result[19],result[20],result[21],result[22],result[23],result[24],result[25],result[26],result[27],result[28],
+                        //     result[29], result[30], result[31],result[32],result[33],result[34]
+                        // ],
                         selectedOptions: []
                     };
 
@@ -46,7 +54,40 @@ $(document).ready(function() {
             };
             var Ctor = Vue.extend(Main);
             new Ctor().$mount('#app');
-            console.log(result);
+            // console.log(result);
+
+            // 聚会时间
+            var Main1 = {
+                data() {
+                    // console.log(TimeInfo[1])
+                    // console.log("aaaaaaaaaaaaaaaaa")
+                    // var timeInfo = [];
+                    // for (var i = 0; i < TimeInfo.length ;i++){
+                    //     timeInfo.push(TimeInfo[i]);
+                    // }
+                    // console.log(timeInfo)
+                    // TimeInfo = timeInfo;
+                    return {
+                        TimeInfo,
+                        value: ''
+                    }
+                }
+            }
+            var Ctor = Vue.extend(Main1);
+            new Ctor().$mount('#myVue1');
+
+
+            // 费用
+            var Main2 = {
+                data() {
+                    return {
+                        CostInfo,
+                        value: ''
+                    };
+                }
+            }
+            var Ctor = Vue.extend(Main2);
+            new Ctor().$mount('#myVue2')
         },
     })
 });
@@ -3745,35 +3786,35 @@ $(document).ready(function() {
 // new Ctor().$mount('#app');
 
 
-var Main1 = {
-    data() {
-        return {
-            TimeInfo: [
-                {value: "tDay", label: '3日内'},
-                {value: "weekDay", label: '星期六日'},
-                {value: "oMonth", label: '1个月内'},
-                {value: "fMonth", label: '3个月内'},
-            ],
-            value: ''
-        }
-    }
-}
-var Ctor = Vue.extend(Main1);
-new Ctor().$mount('#myVue1')
+// var Main1 = {
+//     data() {
+//         return {
+//             TimeInfo: [
+//                 {value: "tDay", label: '3日内'},
+//                 {value: "weekDay", label: '星期六日'},
+//                 {value: "oMonth", label: '1个月内'},
+//                 {value: "fMonth", label: '3个月内'},
+//             ],
+//             value: ''
+//         }
+//     }
+// }
+// var Ctor = Vue.extend(Main1);
+// new Ctor().$mount('#myVue1')
 
 
 
-var Main2 = {
-    data() {
-        return {
-            CostInfo: [
-                {value: "free", label: '免费'},
-                {value: "cost", label: '报名费'},
-            ],
-            value: ''
-        }
-    }
-}
-var Ctor = Vue.extend(Main2);
-new Ctor().$mount('#myVue2')
+// var Main2 = {
+//     data() {
+//         return {
+//             CostInfo: [
+//                 {value: "free", label: '免费'},
+//                 {value: "cost", label: '报名费'},
+//             ],
+//             value: ''
+//         };
+//     }
+// }
+// var Ctor = Vue.extend(Main2);
+// new Ctor().$mount('#myVue2')
 

@@ -15,6 +15,10 @@ a{
     -moz-user-select: none;
 }
 
+::-webkit-scrollbar{
+    display:none;
+}
+
 /* 头部标签 */
 .titles{
     width: 100%;
@@ -104,7 +108,7 @@ a{
 .indexContent span{
     font-size: 12px;
     color: #aaaaaa;
-    line-height: 14px;
+    line-height: 20px;
 }
 .indexContentMon{
     float: right;
@@ -530,19 +534,33 @@ a{
     聚会成员
  */
 .partyMenContent{
-    margin: 0 1% 0 1.5%;
+    margin: 0 5px 0 5px;
     /*border: 1px solid black;*/
     /*width: 98%;*/
-    padding: 3% 1%;
+    padding: 2% 3px 2% 5px;
+    /*background-color: rebeccapurple;*/
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
 }
 .memContent{
-    /*border: 1px solid red;*/
-    width: 21.5%;
-    /*height: 80px;*/
-    display: -webkit-inline-flex;
     text-align: center;
-    margin: 2% 1%;
-    padding: 0.5% 0;
+    /*border: 1px solid red;*/
+    width: 18%;
+    /*height: 80px;*/
+    /*background-color: #cf292e;*/
+    order:0;
+    flex-grow:0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    /*text-align: center;*/
+    margin: 5px 2px 12px 2px;
+    padding: 1% 1px;
 }
 .partyMenContent img{
     /*width: 67px;*/
@@ -551,13 +569,13 @@ a{
 }
 .memContent span{
     /*background-color: #cf292e;*/
-    width: 21.5%;
+    width: 17.1%;
     position: absolute;
     font-size: 12px;
     line-height: 20px;
-    /*text-align: center;*/
-    /*margin-top: 85px;*/
-    margin-top: 20%;
+    text-align: center;
+    /*margin-top: 57px;*/
+    margin-top: 17%;
     /* 省略 */
     text-overflow:ellipsis;
     overflow:hidden;
@@ -658,7 +676,7 @@ a{
     float: right;
     padding: 0 2px;
     border-radius: 3px;
-    margin-right: -10px;
+    /*margin-right: -20%;*/
 }
 .cardContentConBotBtn{
     font-size: 12px;

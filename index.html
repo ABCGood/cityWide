@@ -39,16 +39,26 @@
         padding-bottom: 10px;
     }
     .el-select-dropdown{
-        width: 315px;
+        width: 100%;
     }
     .el-cascader-menu{
-        width: 105px;
+        /*width: 105px;*/
+        width: 33.3%;
+        border:1px solid #d1dbe5;
+        box-shadow: 0 2px 4px rgba(0,0,0,.12), 0 0 6px rgba(0,0,0,.04);
     }
     .el-select .el-input__inner:focus:-ms-input-placeholder,.el-select .el-input .el-input__icon.is-reverse{
         color: #cf292e;
     }
     .el-select .el-input__inner:focus::-webkit-input-placeholder, .el-select .el-input .el-input__icon.is-reverse{
         color: #cf292e;
+    }
+    .el-cascader-menus{
+        width: 100%;
+        background: none;
+        border: none;
+        box-shadow: none;
+        /*background-color: #1E9FFF;*/
     }
 </style>
 <script>
@@ -107,7 +117,7 @@
                             <span class="indexContentMon" style="color: #f08519;">报名费{{d[i].cost}}元/人</span><br>
                             <span>人数：仅限{{d[i].num}}人</span>
                             <a href="details_page.html">
-                                <span class="indexContentBtn" style="color: #cf292e;">立即报名</span>
+                                <span class="indexContentBtn" style="color: #cf292e;line-height: 14px;">立即报名</span>
                             </a>
                         </div>
                     {{# } }}
@@ -136,6 +146,7 @@
         </div>
     </div>
 </div>
+
 
 <script src="js/vue.js"></script>
 <script type="text/javascript" src="eleme-ui/index.js" ></script>

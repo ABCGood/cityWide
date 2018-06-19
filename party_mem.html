@@ -16,25 +16,25 @@
     </div>
 </div>
 
-<div class="partyMenContent">
+<!--<div class="partyMenContent">-->
     <!--<div class="memContent">-->
         <!--<a href="visiting_card.html">-->
-            <!--<span>xiaoh</span>-->
             <!--<img src="images/head_por.jpg">-->
+            <!--&lt;!&ndash;<span>xiaoh</span>&ndash;&gt;-->
         <!--</a>-->
     <!--</div>-->
-    <script id="memContent" type="text/html">
-        {{# for(var i = 0; i < d.content.length; i++){ }}
-            <div class="memContent">
-                <a href="visiting_card.html">
-                    <span>{{d.content[i].name}}</span>
-                    <img src="images/head_por.jpg">
-                </a>
-            </div>
-        {{# } }}
-    </script>
-    <div id="textMemContent"></div>
-</div>
+<!--</div>-->
+<script id="memContent" type="text/html">
+    {{# for(var i = 0; i < d.content.length; i++){ }}
+    <div class="memContent">
+        <a href="visiting_card.html">
+            <span>{{d.content[i].name}}</span>
+            <img src="images/head_por.jpg">
+        </a>
+    </div>
+    {{# } }}
+</script>
+<div id="textMemContent" class="partyMenContent"></div>
 <script src="js/party_mem.js"></script>
 </body>
 </html>

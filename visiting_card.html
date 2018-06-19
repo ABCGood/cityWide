@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <title>名片详情</title>
     <link href="css/citywide.css" rel="stylesheet">
 </head>
@@ -40,19 +40,24 @@
     <img src="images/detail.png" class="detail">
     <p class="cardContentCenterTitle">邀请你参加我们的聚会</p>
     <hr>
-    <div class="cardContentCenterCon">
-        <div class="content" id="cardContentCenter">
-            <span>唱歌喝酒女神专场</span>
-            <p>地址：[揭阳市榕城区]新野KTV</p>
-            <p>2018.04.02 14:00-17:00</p>
-            <div class="cardCenterConBtn">
-                <span style="color: #f0b931">限女生</span>
-                <span>人数：30</span>
-                <span class="btn">立即报名</span>
+    <script id="cardPartyContent" type="text/html">
+        {{# for(var i = 0; i < d.party.length; i++){ }}
+        <div class="cardContentCenterCon">
+            <div class="content" id="cardContentCenter{{i}}">
+                <span>{{d.party[i].title}}</span>
+                <p>地址：{{d.party[i].adress}}</p>
+                <p>{{d.party[i].time}}</p>
+                <div class="cardCenterConBtn">
+                    <span style="color: #f0b931">{{d.party[i].sex}}</span>
+                    <span>人数：{{d.party[i].num}}</span>
+                    <span class="btn">立即报名</span>
+                </div>
             </div>
+            <img src="images/head_por2.jpg" class="head_por2">
         </div>
-        <img src="images/head_por2.jpg" class="head_por2">
-    </div>
+        {{# } }}
+    </script>
+    <div id="textPartyCardContent"></div>
 </div>
 <div class="cardContentContentBottom">
     <img src="images/detail.png" class="detail">

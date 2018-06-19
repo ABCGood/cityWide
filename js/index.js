@@ -26,11 +26,23 @@ layui.use('element', function(){
 });
 // 读取屏幕宽度来设置选项卡的宽度
 // $(document).ready(function () {
-//     console.log(window.innerWidth);
-//     var windowWidth = screen.availWidth;
-//     var widths = windowWidth/2-30;
-//     document.getElementById("tabTop1").style.width = widths+"px";
-//     document.getElementById("tabTop2").style.width = widths+"px";
+//     // console.log(window.innerWidth);
+//     // var windowWidth = screen.availWidth;
+//     // // var widths = windowWidth/2-30;
+//     // var menu = document.getElementsByClassName("el-cascader-menu");
+//     // var x = document.getElementsByClassName("el-cascader-menu");
+//     // document.getElementById("tabTop1").style.width = widths+"px";
+//     // // document.getElementById("tabTop2").style.width = widths+"px";
+//     // if (windowWidth == 320){
+//     //     menu.style.backgroundColor = "105px"
+//     // } else {
+//     //     menu.style.width = "125px"
+//     // }
+//     var a1 = document.getElementsByClassName("el-cascader-menu");
+//
+//     for(var i = 0; i < a1.length; i++){
+//         a1[i].style.width = "100px";
+//     }
 // });
 
 // 读取数据，遍历
